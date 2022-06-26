@@ -1,0 +1,31 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}]": "utter_goodbye",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"course_detail\"}}]": "utter_course_question",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"course_detail\"}}, {\"active_loop\": {\"name\": \"course_details_form\"}, \"prev_action\": {\"action_name\": \"utter_course_question\"}, \"user\": {\"intent\": \"course_detail\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "utter_iamabot",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [
+      "course_details_form"
+    ],
+    "rules_for_loop_unhappy_path": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"course_details_form\"}, \"prev_action\": {\"action_name\": \"utter_course_question\"}, \"user\": {\"intent\": \"course_detail\"}}]": "do_not_predict_loop_action"
+    },
+    "rules_not_in_stories": [
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "predicting default action with intent back",
+      "predicting default action with intent session_start",
+      "handling active loops and forms - course_details_form - action_listen",
+      "handling active loops and forms - course_details_form",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"course_detail\"}}, {\"active_loop\": {\"name\": \"course_details_form\"}, \"prev_action\": {\"action_name\": \"utter_course_question\"}, \"user\": {\"intent\": \"course_detail\"}}]",
+      "predicting default action with intent restart"
+    ]
+  }
+}

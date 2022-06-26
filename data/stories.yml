@@ -1,0 +1,95 @@
+version: "3.1"
+
+stories:
+
+- story: course detail 1
+  steps:
+  - intent: course_detail
+  - action: utter_course_question
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: initial options 1
+  steps:
+  - intent: greet
+  - action: utter_init_response
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: refund policy
+  steps:
+  - intent: refund_policy
+  - action: utter_refund_policy_response
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: job gurenty policy
+  steps:
+  - intent: job_gurenty_policy
+  - action: utter_job_gurentee_policy_response
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: course detail story
+  steps:
+  - intent: course
+  - action: utter_what_course_needed
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: other options
+  steps:
+  - intent: others
+  - action: utter_what_course_needed
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: internship details
+  steps:
+  - intent: internship
+  - action: utter_internship_exited
+  - action: internship_detail_form
+  - action: utter_ask_domain
+  - intent: internship_details_domain
+  - action: utter_ask_resume_link
+  - intent: resume_link
+  - action: utter_resume_link_response
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: technical quesry story
+  steps:
+    - intent: technical_query
+    - action: utter_tech_query_response
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: class details story
+  steps:
+    - intent: class_details
+    - action: utter_class_details_response
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: assignment details story
+  steps:
+    - intent: assignment_details
+    - action: utter_assignment_details_response
+    - intent: goodbye
+    - action: utter_goodbye
+
+
+- story: ask query story
+  steps:
+    - intent: ask_query
+    - action: utter_Ask_query_response
+
+- story: ask for help
+  steps:
+    - intent: help
+    - action: utter_help_response
+
+- story: affirmation
+  steps:
+    - intent: affirm
+    - action: utter_affirmation_response

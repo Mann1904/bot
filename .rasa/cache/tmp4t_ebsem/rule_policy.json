@@ -1,0 +1,38 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"internship\"}}]": "utter_internship_exited",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"internship\"}}, {\"active_loop\": {\"name\": \"internship_detail_form\"}, \"prev_action\": {\"action_name\": \"utter_internship_exited\"}, \"user\": {\"intent\": \"internship\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}]": "utter_goodbye",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}]": "utter_init_response",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}, {\"active_loop\": {\"name\": \"initial_options_form\"}, \"prev_action\": {\"action_name\": \"utter_init_response\"}, \"user\": {\"intent\": \"greet\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "utter_iamabot",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [
+      "initial_options_form",
+      "internship_detail_form"
+    ],
+    "rules_for_loop_unhappy_path": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"internship_detail_form\"}, \"prev_action\": {\"action_name\": \"utter_internship_exited\"}, \"user\": {\"intent\": \"internship\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"initial_options_form\"}, \"prev_action\": {\"action_name\": \"utter_init_response\"}, \"user\": {\"intent\": \"greet\"}}]": "do_not_predict_loop_action"
+    },
+    "rules_not_in_stories": [
+      "predicting default action with intent back",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}, {\"active_loop\": {\"name\": \"initial_options_form\"}, \"prev_action\": {\"action_name\": \"utter_init_response\"}, \"user\": {\"intent\": \"greet\"}}]",
+      "handling active loops and forms - internship_detail_form - action_listen",
+      "handling active loops and forms - initial_options_form",
+      "handling active loops and forms - internship_detail_form",
+      "predicting default action with intent session_start",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "handling active loops and forms - initial_options_form - action_listen",
+      "predicting default action with intent restart",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"internship\"}}, {\"active_loop\": {\"name\": \"internship_detail_form\"}, \"prev_action\": {\"action_name\": \"utter_internship_exited\"}, \"user\": {\"intent\": \"internship\"}}]",
+      "handling active loops and forms - course_details_form",
+      "handling active loops and forms - course_details_form - action_listen"
+    ]
+  }
+}

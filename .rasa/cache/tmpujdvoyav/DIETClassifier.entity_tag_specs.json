@@ -1,0 +1,28 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-course_name",
+      "2": "I-course_name",
+      "3": "L-course_name",
+      "4": "U-course_name",
+      "5": "B-domain_ent_option",
+      "6": "I-domain_ent_option",
+      "7": "L-domain_ent_option",
+      "8": "U-domain_ent_option",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-course_name": 1,
+      "I-course_name": 2,
+      "L-course_name": 3,
+      "U-course_name": 4,
+      "B-domain_ent_option": 5,
+      "I-domain_ent_option": 6,
+      "L-domain_ent_option": 7,
+      "U-domain_ent_option": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  }
+]

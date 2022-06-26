@@ -1,0 +1,192 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - hola
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - tata
+    - thanks
+    - thank you
+    - ty
+    - bye bye
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - hell yeah!!
+    
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - naah, I don't think so
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - Oy! who are you?
+
+- intent: course
+  examples: |
+    - course details
+    - need details about the course
+
+- intent: course_detail
+  examples: |
+    - [AI/ML]{"entity":"course_name", "value":"AI_COURSE"} course details
+    - need details about [AI]{"entity":"course_name", "value":"AI_COURSE"} related courses
+    - details about [ML]{"entity":"course_name", "value":"AI_COURSE"}
+    - details about [Machine learning]{"entity":"course_name", "value":"AI_COURSE"} course
+    - [ML]{"entity":"course_name", "value":"AI_COURSE"} course details
+
+- synonym: AI_COURSE
+  examples: |
+    - AI/ML
+    - AI
+    - ML
+    - Machine learning
+
+- intent: job_gurenty_policy
+  examples: |
+    - job gurentee policy
+    - what are the job gurentee policies here?
+
+- intent: refund_policy
+  examples: |
+    - refund policy
+    - I want my money back.
+    - Need refund.
+    - Refund related queries.
+
+- intent: others
+  examples: |
+    - Have some errors in the code?
+    - Errors in the code.
+    - need help regarding assignment
+    - help needed regarding installing the tools.
+
+- intent: internship
+  examples: |
+    - internship
+    - how can i apply for internship at iNeuron?
+    - Internships
+    - internship at iNeuron
+
+- intent: internship_details_domain
+  examples: |
+    - [Data Science](domain_ent_option)
+    - [Development](domain_ent_option)
+    - [Programming](domain_ent_option)
+    - [Cloud](domain_ent_option)
+    - [Marketing](domain_ent_option)
+    - [Blockchain](domain_ent_option)
+
+- intent: resume_link
+  examples: |
+    - [https://forum.rasa.com](domain_ent_option)
+    - [https://ineuron.ai/](domain_ent_option)
+    - [https://github.com/botfront/rasa-webchat](domain_ent_option)
+    - [http://localhost:8888/tree/Desktop/hackathon_part2](domain_ent_option)
+    - [https://web.whatsapp.com/](domain_ent_option)
+
+
+- intent: technical_query
+  examples: |
+    - i am enrolled in full stack data science course, started on 07.05.22.i am watching course on fast forward mode, i am having some problem while installing while installing mysql. need your help in it. thanks in advance.
+    - sir, how to remove strings from sublists of a list?
+    - and i am getting the same error  index out of range"
+    - i am unable to install the requirements
+    - getting below error
+    - hello sir i have taken machine learning and deep learning masters course today and i am facing problem to excess python resources in jupyter 
+    - i am getting an error modulenotfounderror: no module named 'flask_cors'
+    - even i have installed already still showing error
+    - sir this is giving error where i am unable to get it please check it once
+    - i am not able to run the python file taught in the class. the api class
+    - i am facing issues in installing pydb in jupyter notebook
+
+
+- intent: class_details
+  examples: |
+    - is today's class cancelled?
+    - will class be scheduled for this weekend?
+
+- intent: assignment_details
+  examples: |
+    - we have to solve and submit the python assignments in word doc itself or in jupyter notebbok?
+    - i m facing a problem while solving one of the assignments
+    - how can we create folders in github for assignment submission.?
+    - should i upload different type of assignment by creating different project.?
+    - could you please help me where to upload the assignment on github
+
+- intent: ask_query
+  examples: |
+    - i have queries regarding the course, please help me with that
+    - hello. my name is pratyush mahato. i enrolled for full stack data science with 1 year internship yesterday. i have some queries. 
+    - this is sowmya, i have few queries 
+    - i have few queries
+    - i had a doubt
+
+- intent: help
+  examples: |
+    - i need ur urgent help
+    - i have one request for you
+    - i need a help
+    - can you please help me out
+    - i need some assistance

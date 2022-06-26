@@ -1,0 +1,7 @@
+{
+  "rule_only_slots": [],
+  "rule_only_loops": [
+    "internship_detail_form",
+    "initial_options_form"
+  ]
+}

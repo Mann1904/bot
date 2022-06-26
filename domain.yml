@@ -1,0 +1,174 @@
+version: "3.1"
+
+entities:
+- course_name
+- init_option
+- domain_ent_option
+- link_ent
+
+slots:
+  course_name_slot:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: course_name
+  init_option_slot:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: init_option
+  domain_slot:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: domain_ent_option
+  link_slot:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: link_ent
+
+forms:
+  course_details_form:
+    ignored_intents: 
+    - chitchat
+    required_slots:
+        - course_name_slot
+
+  initial_options_form:
+    ignored_intents: 
+    - chitchat
+    required_slots:
+        - init_option_slot
+
+  internship_detail_form:
+    ignored_intents: 
+    - chitchat
+    required_slots:
+      - domain
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_unhappy
+  - bot_challenge
+  - course_detail
+  - course
+  - job_gurenty_policy
+  - refund_policy
+  - others
+  - internship
+  - internship_details_domain
+  - resume_link
+  - technical_query
+  - ask_query
+  - class_details
+  - help
+  - assignment_details
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+  - text: "Hola! How do you do?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+  - text: "Good to hear that mate!"
+
+  utter_goodbye:
+  - text: "Bye"
+  - text: "Good bye. Have a great day."
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_course_question:
+  - text: "That is so great to hear! Here are the details of the course. \nCourse name: ML/DL A to Z \nDuration: 2 months\nNext batch starts from: 1st July 2022\n Technology stack: Python, sklearn, Tensorflow, Keras"
+
+  utter_what_course_needed:
+  - text: "What specific course details are you looking for?"
+  - text: "Good to here that! Exactly what course details do you need?"
+
+
+  utter_init_response:
+  - text: "Hello there! How can i help you?"
+    buttons:
+    - title: "Course details"
+      payload: "/course"
+    - title: "Refund policies"
+      payload: "/refund_policy"
+    - title: "Job gurentee policies"
+      payload: "/job_gurenty_policy"
+    - title: "Internship at iNeuron"
+      payload: "/internship"
+    - title: "Other queries"
+      payload: "/others"
+  
+  utter_ask_domain:
+  - text: "Great to hear that! What domian are you interested in?"
+    buttons:
+    - title: Data Science
+      payload: "/Data Science"
+    - title: Development
+      payload: "/Development"
+    - title: Programming
+      payload: "/Programming"
+    - title: Cloud
+      payload: "/Cloud"
+    - title: Marketing
+      payload: "/Marketing"
+    - title: Blockchain
+      payload: "/Blockchain"
+
+  utter_internship_exited:
+    - text: "iNeuron is a platform where you will explore, experiment, learn, participate and build a project based on an industry-defined approach."
+
+  utter_ask_resume_link:
+    - text: "Please share the link of your resume. (Upload your resume on Google Drive, make sure it is accessible publically, and share the link with us)."
+
+  utter_resume_link_response:
+    - text: "Great! I will share the details with technical team. They will get in touch with you soon."
+
+  utter_refund_policy_response:
+  - text: "Refund will be provided for specific program such as the Full-Stack Data Science program, Full Stack Javascript Web Developer program. The refund is given only in the event in which the candidates completes all terms and conditions of the course (https://ineuron.ai/job-guarantee) and despite that if they are not given interview opportunities at the end of the course their amount will be refunded."
+
+  utter_job_gurentee_policy_response:
+  - text: "Everybody is eligible to take the course who would like to learn, explore, grasp and experiment with Artificial intelligence(Machine learning, Deep Learning, Computer vision, Natural language processing, big data, Data analytics), Web Development(JavaScript with React, Vue, Angular, Nodejs, MongoDB, NextJS, Tailwind, etc.). Regardless of their background, Artificial intelligence, Web Development is a booming technology making its way into every industry. Visit [this link](https://ineuron.ai/job-guarantee) for detailed information."
+
+  utter_internship_response:
+  - text: "We are exited to here that. We will need some information from you first."
+
+  utter_tech_query_response:
+  - text: "I am a bot. I am still learning things. This seems important, so our technical expert team will guide you better. you may reach the through- contact@ineuron.ai"
+
+  utter_class_details_response:
+  - text: "iNeuron team will let you know on your email. Please keep checking you mailbox frequently."
+  - text: "Our team will let you know on your email. Please keep checking you mailbox frequently."
+
+  utter_assignment_details_response:
+  - text: "I am not fully aware about the course specific assignments. You may contact technical support team on this email-id: techsupport@ineuron.com. They will be happy to help you."
+
+  utter_Ask_query_response:
+  - text: "Ask away, I will be happy to help you."
+  - text: "Please ask, I am literally made to assist you."
+
+  utter_help_response:
+  - text: "How can i help you?"
+  - text: "How can i be of assistance?"
+
+  utter_affirmation_response:
+  - text: "You are welcome."
+  - text: "Happy to help!"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
